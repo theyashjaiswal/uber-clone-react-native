@@ -5,13 +5,17 @@ import Map from "../components/Map";
 import { createStackNavigator } from "@react-navigation/stack";
 import NavigateCard from "../components/NavigateCard";
 import CarOptions from "../components/CarOptions";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import { Icon } from "react-native-elements/dist/icons/Icon";
+import { useNavigation } from "@react-navigation/core";
 
 const MapScreen = () => {
   const Stack = createStackNavigator();
+  const navigation = useNavigation();
   return (
     <View>
       <View style={tw`h-1/2`}>
-        <Map></Map>
+        <Map />
       </View>
       <View style={tw`h-1/2`}>
         <Stack.Navigator>
